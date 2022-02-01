@@ -10,7 +10,7 @@ router.get("/", (req, res) => {
     "Access-Control-Allow-Origin": "*",
   });
   res.write(
-    `<div class="loading"><img src="https://giphy.com/gifs/5rRMnqwrxpK849BTto" loop=infinite /></div>`
+    `<div class="loading"><img src="./assets/timo.gif" loop=infinite /></div>`
   );
   res.end();
 });

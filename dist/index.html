@@ -10,12 +10,14 @@
   </head>
 
   <body>
+    <audio src="./assets/timo.mp3" autoplay="autoplay" loop="loop"></audio>
     <h1>Finding Timothy..<span class="loading">.</span></h1>
     <div id="timo" />
   </body>
+
   <script>
     const timo = document.getElementById("timo");
-    fetch("http://localhost:3000/.netlify/functions/timo", {
+    fetch(window.location.origin + "/.netlify/functions/timo", {
       method: "GET",
     }).then((r) => r.text().then((t) => (timo.innerHTML = t)));
   </script>
