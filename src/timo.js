@@ -5,9 +5,13 @@ const app = express();
 const router = express.Router();
 
 router.get("/", (req, res) => {
-  res.writeHead(200, { "Content-Type": "text/html" });
-  res.write(`<img src="https://media.giphy.com/media/Ju7l5y9osyymQ/giphy.gif" loop=infinite />
-`);
+  res.writeHead(200, {
+    "Content-Type": "text/html",
+    "Access-Control-Allow-Origin": "*",
+  });
+  res.write(
+    `<div class="loading"><img src="https://giphy.com/gifs/5rRMnqwrxpK849BTto" loop=infinite /></div>`
+  );
   res.end();
 });
 

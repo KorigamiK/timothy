@@ -3,20 +3,20 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <!-- <link
-      rel="icon"
-      type="image/svg+xml"
-      href="/korigamik/assets/crane-colored.1c3a0fc0.png"
-    /> -->
+    <link rel="icon" type="image/jpeg" href="./assets/timo.jpg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Timo</title>
-    <link rel="stylesheet" href="/assets/style.css" />
+    <link rel="stylesheet" href="./assets/style.css" type="text/css" />
   </head>
 
   <body>
-    <object
-      type="text/html"
-      data="http://localhost:3000/.netlify/functions/timo"
-    ></object>
+    <h1>Finding Timothy..<span class="loading">.</span></h1>
+    <div id="timo" />
   </body>
+  <script>
+    const timo = document.getElementById("timo");
+    fetch("http://localhost:3000/.netlify/functions/timo", {
+      method: "GET",
+    }).then((r) => r.text().then((t) => (timo.innerHTML = t)));
+  </script>
 </html>

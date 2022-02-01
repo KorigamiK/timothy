@@ -1,0 +1,32 @@
+html {
+  background: #222;
+}
+
+body {
+  font-weight: bold;
+  font-family: "SF Mono", "Courier New", Courier, monospace;
+  font-size: 16px;
+  color: #ff4473;
+  text-align: center;
+  padding-top: 100px;
+}
+
+h1 {
+  font-size: xxx-large;
+  text-align: center;
+}
+
+.loading {
+  content: "i";
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
